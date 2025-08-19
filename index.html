@@ -239,53 +239,71 @@
                     <legend>Passo 3: Seus dados para entrega</legend>
 
                     <div class="form-grid">
+                        <!-- Campo Nome -->
                         <div class="grupo-campo campo-completo">
                             <label for="nome">
                                 <span aria-hidden="true">👤</span>
-                                Nome completo (obrigatório)
+                                Nome completo
                             </label>
-                            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo"
-                                autocomplete="name">
+                            <input type="text" id="nome" name="nome" required 
+                                placeholder="Digite seu nome completo"
+                                autocomplete="name"
+                                aria-describedby="ajuda-nome erro-nome">
+                            <p id="ajuda-nome" class="ajuda">Nome Completo obrigatorio</p>
                             <div id="erro-nome" class="mensagem-erro" role="alert"></div>
                         </div>
 
+                        <!-- Campo CEP -->
                         <div class="grupo-campo">
                             <label for="cep">
                                 <span aria-hidden="true">📍</span>
-                                CEP (obrigatório)
+                                CEP
                             </label>
-                            <input type="text" id="cep" name="cep" placeholder="00000-000" required
-                                autocomplete="postal-code" maxlength="9">
-                            <p id="ajuda-cep" class="ajuda">Precisamos do CEP para calcular o frete</p>
+                            <input type="text" id="cep" name="cep" 
+                                placeholder="00000-000" required
+                                autocomplete="postal-code" maxlength="9"
+                                aria-describedby="ajuda-cep erro-cep">
+                            <p id="ajuda-cep" class="ajuda">CEP obrigatorio</p>
                             <div id="erro-cep" class="mensagem-erro" role="alert"></div>
                         </div>
 
+                        <!-- Campo Endereço -->
                         <div class="grupo-campo">
                             <label for="endereco">
                                 <span aria-hidden="true">🏠</span>
-                                Endereço completo (obrigatório)
+                                Endereço completo
                             </label>
                             <input type="text" id="endereco" name="endereco"
-                                placeholder="Rua, número, bairro, cidade" autocomplete="street-address">
+                                placeholder="Rua, número, bairro, cidade" 
+                                autocomplete="street-address"
+                                aria-describedby="ajuda-endereco" required>
+                            <p id="ajuda-endereco" class="ajuda">Endereço obrigatorio</p>
                         </div>
 
+                        <!-- Campo Telefone -->
                         <div class="grupo-campo">
                             <label for="telefone">
                                 <span aria-hidden="true">📱</span>
-                                Telefone para contato (obrigatório)
+                                Telefone para contato
                             </label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999"
-                                autocomplete="tel" maxlength="15">
-                            <p id="ajuda-telefone" class="ajuda">Para contato sobre a entrega</p>
+                            <input type="tel" id="telefone" name="telefone" 
+                                placeholder="(11) 99999-9999"
+                                autocomplete="tel" maxlength="15"
+                                aria-describedby="ajuda-telefone" required>
+                            <p id="ajuda-telefone" class="ajuda">Telefone obrigatorio</p>
                         </div>
 
+                        <!-- Campo Email -->
                         <div class="grupo-campo">
                             <label for="email">
                                 <span aria-hidden="true">📧</span>
-                                E-mail (obrigatório)
+                                E-mail 
                             </label>
-                            <input type="email" id="email" name="email" placeholder="seu@email.com"
-                                autocomplete="email">
+                            <input type="email" id="email" name="email" 
+                                placeholder="seu@email.com"
+                                autocomplete="email"
+                                aria-describedby="ajuda-email" required>
+                            <p id="ajuda-email" class="ajuda">Email obrigatorio</p>
                         </div>
                     </div>
                 </fieldset>
